@@ -9,7 +9,7 @@ const SignInScreen = () => {
 
   const theme = useTheme();
   return (
-      <View>
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <View style={styles.container}>
             <Image source={require('../../../assets/automate_logo.png')} style={{ width: 250, height: 250 }}/>
             <TextInput style={{minWidth: '100%'}} autoCorrect={false} keyboardType='email-address' autoCapitalize="none" label="Email" mode="outlined" placeholder="Email"/>

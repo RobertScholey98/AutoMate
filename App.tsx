@@ -1,8 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { Keyboard, SafeAreaView, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
-import SignInScreen from './src/screens/SignInScreen';
 import { customTheme } from './src/design/theme';
+import Navigator from './src/navigation';
+
+import SignInScreen from './src/screens/SignInScreen';
+import Homescreen from './src/screens/Homescreen';
+import { NavigationContainer } from '@react-navigation/native';
+
 export default function App() {
 
   const isLoggedIn = false;
@@ -17,19 +22,13 @@ export default function App() {
   return (
     <PaperProvider theme={customTheme}>
       <DismissKeyboard>
-        <SafeAreaView style={styles.container}>
-            <SignInScreen />
-        </SafeAreaView>
+        <NavigationContainer>
+          
+          <Navigator />
+        </NavigationContainer>
       </DismissKeyboard>
     </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f2f2f2',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
