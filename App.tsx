@@ -1,16 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Keyboard, SafeAreaView, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 import SignInScreen from './src/screens/SignInScreen';
+import { customTheme } from './src/design/theme';
 export default function App() {
 
   const isLoggedIn = false;
+  
+  const DismissKeyboard = ({children}: any) => (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        {children}
+    </TouchableWithoutFeedback>
+  )
+
 
   return (
-    <PaperProvider>
-      <SafeAreaView style={styles.container}>
-        <SignInScreen />
-      </SafeAreaView>
+    <PaperProvider theme={customTheme}>
+      <DismissKeyboard>
+        <SafeAreaView style={styles.container}>
+            <SignInScreen />
+        </SafeAreaView>
+      </DismissKeyboard>
     </PaperProvider>
   );
 }
