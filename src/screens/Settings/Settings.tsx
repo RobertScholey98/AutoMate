@@ -4,11 +4,12 @@ import React from 'react'
 import Garage from '../Garage';
 import CarDetails from '../Car/CarDetails';
 import { useTheme } from 'react-native-paper';
+import SettingsHome from './SettingsHome';
 const Stack = createNativeStackNavigator();
 
 
 
-const Homescreen = () => {
+const Settings = () => {
   const theme = useTheme();
     return (
         <Stack.Navigator 
@@ -21,12 +22,12 @@ const Homescreen = () => {
           }
         >
       
-          <Stack.Screen name="Garage" component={Garage} />
-          <Stack.Screen name="CarDetails" component={CarDetails} />
+          <Stack.Screen name="Settings" component={SettingsHome} />
+          <Stack.Screen name="SomeSetting" component={CarDetails} />
         </Stack.Navigator>
     );
   };
 
-export default Homescreen
+export default Settings
 
 const styles = StyleSheet.create({})

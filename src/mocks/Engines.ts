@@ -256,7 +256,7 @@ export const DHBServiceRecord: CompletedServiceItem[] = [
         completed_at: 37500,
         completed_by: "Alex",
         completed_by_id: 2,
-    }
+    },
     {
         id: 12,
         interval_unit: "miles",
@@ -315,5 +315,7 @@ export const DHBServiceRecord: CompletedServiceItem[] = [
         completed_by: "Alex",
         completed_by_id: 2,
     }
+
+];
 
     

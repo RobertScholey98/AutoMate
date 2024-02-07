@@ -10,4 +10,6 @@ export type Car = {
     engine: Engine;
     service_record: ServiceRecord;
     private: boolean;
+    predicted_yearly_mileage?: number;
+    imageUrl?: string;
 };

@@ -1,10 +1,11 @@
+import { Car } from "../Model/Cars";
 import { Engine } from "../Model/Engine";
 import { Job, ServiceItem } from "../Model/Service";
 import { Caxa, CaxaServiceRecord, DHB, DHBServiceRecord } from "./Engines";
 import { oilChange, oilFilterChange, sparkPlugChange } from "./Jobs";
 
 
-const mockCar2 = {
+export const mockCar2: Car = {
     id: 2,
     make: 'Ford',
     model: 'Fiesta',
@@ -17,16 +18,18 @@ const mockCar2 = {
     engine: DHB,
     service_record: DHBServiceRecord,
     private: true, 
+    imageUrl: 'https://cloud.leparking.fr/2021/11/06/16/01/ford-fiesta-mk6-fiesta-st150-noir_8327335734.jpg',
 };
 
-const mockCar1 = {
+export const mockCar1: Car = {
     id: 1,
     make: 'Volkswagen',
     model: 'Golf',
-    variant: 'tsi',
+    variant: 'TSI',
     mileage: 44721,
     predicted_yearly_mileage: 11000,
     year: 2012,
+    imageUrl: 'https://live.staticflickr.com/5306/5669861710_35ea20bedb_b.jpg',
     color: 'white',
     registration: 'YN12MBX',
     engine: Caxa,
@@ -34,7 +37,7 @@ const mockCar1 = {
     private: false,
 }
 
-const mockGarage = {
+export const mockGarage = {
     id: 1,
     name: "My Garage",
     cars: [

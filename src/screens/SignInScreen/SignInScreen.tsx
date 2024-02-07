@@ -1,7 +1,5 @@
 import { View, Text, Image, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native'
 import React from 'react'
-import CustomInput from '../../components/CustomInput'
-import CustomButton from '../../components/CustomButton'
 import { TextInput, Button, useTheme } from 'react-native-paper'
 
 
