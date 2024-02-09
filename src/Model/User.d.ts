@@ -1,3 +1,5 @@
+import { Garage } from "./Garage";
+
 export type User = {
     id: number;
     first_name: string;

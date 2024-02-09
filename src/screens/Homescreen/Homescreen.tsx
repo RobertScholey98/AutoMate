@@ -4,6 +4,8 @@ import React from 'react'
 import Garage from '../Garage';
 import CarDetails from '../Car/CarDetails';
 import { useTheme } from 'react-native-paper';
+import LogMaintenance from '../LogMaintenance';
+
 const Stack = createNativeStackNavigator();
 
 
@@ -23,6 +25,7 @@ const Homescreen = () => {
       
           <Stack.Screen name="Garage" component={Garage} />
           <Stack.Screen name="CarDetails" component={CarDetails} />
+          <Stack.Screen name="logMaintenance" component={LogMaintenance} />
         </Stack.Navigator>
     );
   };

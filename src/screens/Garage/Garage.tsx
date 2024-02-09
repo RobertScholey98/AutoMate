@@ -20,7 +20,7 @@ const CarList = ({cars, navigation}) => {
 const GarageCard = ({car, navigation}) => {
     return (
         <TouchableRipple
-        onPress={() => navigation.navigate('CarDetails', {car: car})}
+        onPress={() => navigation.navigate('CarDetails', {car: car, navigation: navigation})}
         rippleColor="rgba(0, 0, 0, .04)"
         borderless
         style={{margin: 0, width: '95%'}}
@@ -39,7 +39,7 @@ const GarageCard = ({car, navigation}) => {
                 </Card.Content>
                 <Card.Actions>
                     <Button>Book</Button>
-                    <Button onPress={() => navigation.navigate('CarDetails', {car: car})}>Details</Button>
+                    <Button onPress={() => navigation.navigate('CarDetails', {car: car, navigation: navigation})}>Details</Button>
                 </Card.Actions>
                 
         </Card>

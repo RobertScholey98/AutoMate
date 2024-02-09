@@ -1,3 +1,5 @@
+import { ServiceItem } from "./Service";
+
 export type Engine = {
     id: number;
     displacement: number;
@@ -5,5 +7,5 @@ export type Engine = {
     cylinders: number;
     transmission: string;
     engine_code: string;
-    service_Intervals: ServiceItem[];
+    service_intervals: ServiceItem[];
 }

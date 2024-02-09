@@ -9,7 +9,7 @@ export const Caxa: Engine = {
     displacement: 1.4,
     fuel_type: 'petrol',
     transmission: 'manual',
-    service_Intervals: [
+    service_intervals: [
         {
             id: 1,
             interval: 10000,
@@ -122,7 +122,7 @@ export const DHB: Engine = {
     displacement: 1.2,
     fuel_type: 'petrol',
     transmission: 'manual',
-    service_Intervals: [
+    service_intervals: [
         {
             id: 1,
             interval: 6000,
