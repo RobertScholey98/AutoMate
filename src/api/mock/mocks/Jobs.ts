@@ -1,4 +1,4 @@
-import { Job } from "../Model/Service"
+import { Job } from "../../../Model/Service"
 
 export const oilChange: Job = {
     id: 1,

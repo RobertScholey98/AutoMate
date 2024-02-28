@@ -1,6 +1,25 @@
-import { createStore } from "redux";
-import addGarageReducer from './reducers/addGarageReducer';
+import { createStore, Store, combineReducers, AnyAction, Reducer } from 'redux';
+import { persistStore, persistReducer, Persistor } from 'redux-persist';
+import AsyncStorage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
-const store = createStore(addGarageReducer);
+import userReducer, { UserState, UserActions } from './reducers/userReducer';
 
-export default store;
+interface RootState {
+  user: UserState;
+}
+
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage,
+};
+
+const rootReducer: Reducer<RootState, UserActions> = combineReducers({
+  user: userReducer,
+}) as unknown as Reducer<RootState, UserActions>;
+
+const persistedReducer = persistReducer<RootState, UserActions>(persistConfig, rootReducer);
+
+const store: Store<RootState, AnyAction> = createStore(persistedReducer);
+const persistor: Persistor = persistStore(store);
+
+export { store, persistor };

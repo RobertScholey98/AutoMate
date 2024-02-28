@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ScrollView, View } from 'react-native'
 import { Button, Card, Text, TouchableRipple} from 'react-native-paper'
-import { mockGarage } from '../../mocks/mocks'
+import { mockGarage } from '../../api/mock/mocks/mockData'
 import { Car } from '../../Model/Cars'
 import CardTitle from 'react-native-paper/lib/typescript/components/Card/CardTitle'
 import CardContent from 'react-native-paper/lib/typescript/components/Card/CardContent'
+import { useStore } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { User } from '../../Model/User'
 
 const CarList = ({cars, navigation}) => {
     return (
@@ -47,16 +50,16 @@ const GarageCard = ({car, navigation}) => {
         
     )
 }
+
 const Garage = ({navigation}) => {
     
-    //TODO get cars from backend
-    const garageData = mockGarage;
-
-  return (
-    <ScrollView>
-        <CarList navigation={navigation} cars={garageData.cars} />
-    </ScrollView>
-  )
+    const garageData = useSelector((state: any) => state.user.garage);
+    console.log({garageData})
+    return (
+        <ScrollView>
+            <CarList navigation={navigation} cars={garageData.cars} />
+        </ScrollView>
+    )
 }
 
 export default Garage

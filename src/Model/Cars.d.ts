@@ -1,3 +1,5 @@
+import { Engine } from "./Engine";
+
 export type Car = {
     id: number;
     make: string;

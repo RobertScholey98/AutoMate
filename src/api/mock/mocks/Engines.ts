@@ -1,5 +1,5 @@
-import { Engine } from "../Model/Engine";
-import { CompletedServiceItem, ServiceItem } from "../Model/Service";
+import { Engine } from "../../../Model/Engine";
+import { CompletedServiceItem, ServiceItem } from "../../../Model/Service";
 import { airFilterChange, front_tyres, fuelFilterChange, oilChange, oilFilterChange, pollenFilterChange, sparkPlugChange, timingBeltChange } from "./Jobs";
 
 export const Caxa: Engine = {

@@ -1,6 +1,6 @@
-import { Car } from "../Model/Cars";
-import { Engine } from "../Model/Engine";
-import { Job, ServiceItem } from "../Model/Service";
+import { Car } from "../../../Model/Cars";
+import { Engine } from "../../../Model/Engine";
+import { Job, ServiceItem } from "../../../Model/Service";
 import { Caxa, CaxaServiceRecord, DHB, DHBServiceRecord } from "./Engines";
 import { oilChange, oilFilterChange, sparkPlugChange } from "./Jobs";
 
@@ -52,19 +52,18 @@ export const mockGarage = {
     ]
 }
 
-const mockUser = {
+export const mockUser = {
     id: 1,
     first_name: "John",
     last_name: "Doe",
     email: "lqk0H@example.com",
     phone: "555-555-5555",
     garage: mockGarage,
-}
-
-export const mockGetAllData = async () => {
-    setTimeout(() => {
-        return {
-            user: mockUser
-        }
-    }, 2500)
+    settings: {
+        MOT_reminder: true,
+        service_reminder: true,
+        notification: true,
+        MOT_reminder_days: 30,
+        service_reminder_days: 50,
+    }
 }
