@@ -1,3 +1,9 @@
+# TO THE GECKO TEAM
+
+This project is very much an early-stage WIP MVP. 99% of my work is currently in Betways github but there's some cool stuff here to discuss even if it is currently very chaotic 😵‍💫.
+
+
+
 
 
 # AutoMate
@@ -5,8 +11,10 @@
 A native mobile application to help people take better care of their cars by keeping a record of their car service history and notifying them when/what services are due. 
 
 Future possibilities include:
-- opening requests for mechanics to action (making the booking of mechanics easier/cheaper for customers)
-- Showing customers how to do the service and providing a link to where they can buy the parts (requires a couple of brand deals/partnerships to be viable without relying on user inputted information being correct).
+- Analytics based on registered service histories to predict likely non service-item failure points and proactively recommend inspection/preventative maintenance based on the users exact car/age&mileage.
+- opening requests for mechanics to action (making the booking of mechanics easier for customers. You set a date that you're free and they compete for your business without you lifting a finger).
+- Showing customers how to do the service and providing a link to where they can buy the parts (requires a couple of brand deals/partnerships (haynes, gsfCarParts) to be viable without relying on user-inputted information being correct).
+
 
 ## Getting Started
 
